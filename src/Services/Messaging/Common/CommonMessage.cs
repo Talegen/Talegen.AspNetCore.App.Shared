@@ -83,16 +83,16 @@ namespace Talegen.AspNetCore.App.Shared.Services.Messaging.Common
 
             this.RecipientsVisible = recipientsVisible;
             this.Subject = subject;
-            this.Bodies = new Dictionary<MessageBodyType, string>();
+            this.Bodies = new List<MessageBody>();
 
             if (!string.IsNullOrWhiteSpace(textBody))
             {
-                this.Bodies.Add(MessageBodyType.Text, textBody);
+                this.Bodies.Add(new MessageBody { BodyType = MessageBodyType.Text, Body = textBody });
             }
 
             if (!string.IsNullOrWhiteSpace(htmlBody))
             {
-                this.Bodies.Add(MessageBodyType.Html, htmlBody);
+                this.Bodies.Add(new MessageBody { BodyType = MessageBodyType.Html, Body = htmlBody });
             }
 
             this.TextContentType = textBodyContentType;
@@ -137,8 +137,8 @@ namespace Talegen.AspNetCore.App.Shared.Services.Messaging.Common
         /// <summary>
         /// Gets or sets the message body dictionary.
         /// </summary>
-        public Dictionary<MessageBodyType, string> Bodies { get; set; }
-
+        public List<MessageBody> Bodies { get; set; }
+        
         /// <summary>
         /// Gets or sets a value indicating whether the recipients are all included in a single message.
         /// </summary>

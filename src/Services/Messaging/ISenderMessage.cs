@@ -19,27 +19,7 @@ namespace Talegen.AspNetCore.App.Shared.Services.Messaging
     using Talegen.AspNetCore.App.Shared.Services.Queue;
 
 
-    /// <summary>
-    /// Contains an enumeration of message body types.
-    /// </summary>
-    public enum MessageBodyType
-    {
-        /// <summary>
-        /// Message body is plain text.
-        /// </summary>
-        Text = 0,
-
-        /// <summary>
-        /// Message body is HTML.
-        /// </summary>
-        Html = 1,
-
-        /// <summary>
-        /// Message body is other.
-        /// </summary>
-        Other = 2
-    }
-
+    
     /// <summary>
     /// Contains an enumeration of message priorities.
     /// </summary>
@@ -89,6 +69,6 @@ namespace Talegen.AspNetCore.App.Shared.Services.Messaging
         /// <summary>
         /// Gets or sets a dictionary of message bodies.
         /// </summary>
-        Dictionary<MessageBodyType, string> Bodies { get; set; }
+        List<MessageBody> Bodies { get; set; }
     }
 }
