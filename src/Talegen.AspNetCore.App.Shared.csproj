@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Talegen Asp.net Core App Shared Library</Title>
+    <Version>1.0.0</Version>
+    <Authors>Talegen, LLC</Authors>
+    <Description>This library contains shared interfaces and models for implementing services within the Talegen.AspNetCore.App library.</Description>
+    <Copyright>Copyright (c) Talegen, LLC. All rights reserved.</Copyright>
+    <RepositoryUrl>https://github.com/Talegen/Talegen.AspNetCore.App.Shared</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageLicenseExpression>  Apache-2.0</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+  </ItemGroup>
+
+</Project>
