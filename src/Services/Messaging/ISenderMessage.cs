@@ -19,7 +19,7 @@ namespace Talegen.AspNetCore.App.Shared.Services.Messaging
     using Talegen.AspNetCore.App.Shared.Services.Queue;
 
 
-    
+
     /// <summary>
     /// Contains an enumeration of message priorities.
     /// </summary>
@@ -67,8 +67,13 @@ namespace Talegen.AspNetCore.App.Shared.Services.Messaging
         string Subject { get; set; }
 
         /// <summary>
-        /// Gets or sets a dictionary of message bodies.
+        /// Gets or sets the text body of the message.
         /// </summary>
-        List<MessageBody> Bodies { get; set; }
+        string TextBody { get; set; }
+
+        /// <summary>
+        /// Gets or sets the HTML body of the message.
+        /// </summary>
+        string HtmlBody { get; set; }
     }
 }
